@@ -1,5 +1,7 @@
+Q1:potential variables Based on the story of Julius Caesar's secret party and the Caesar Cipher
+
 partyLocation
 shiftValue
 encryptedMessage
 decryptedMessage
-isPartySafe
+isPartySafecod
