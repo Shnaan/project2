@@ -27,8 +27,8 @@ const encryptedFirstLetter = alphabet[newIndex % 26 ]; // generate encripted new
 const alphabetLength = alphabet.length;
 
 const alphabetLength = alphabet.length;
-const newIndex = (index + shiftValue) % alphabetLength;
-const encryptedFirstLetter = alphabet[newIndex];
+const newModulusIndex = (index + shiftValue) % alphabetLength;
+const encryptedFirstLetter = alphabet[newModulusIndex];
 
 const encryptedMessage = "EUXWXV";
 const teaserMessage = encryptedMessage.slice(0,3)
