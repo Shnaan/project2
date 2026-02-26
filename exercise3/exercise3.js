@@ -23,7 +23,7 @@ const range = 33 - 3 + 1; // range = Max - Min + 1 = 31
 
 // Using the random decimal number generated in Step 1, adjust its value to fit within the desired range determined in Step 2.
 
-const randomInRange = randomDecimal * range;
+const randomInRange = randonDecimal * range;
 
 
 // ## Question 2 
