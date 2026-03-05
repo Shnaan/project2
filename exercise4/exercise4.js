@@ -74,3 +74,11 @@ switch(emblemClue3){
     
 }
 
+
+// ## Question 🤔
+
+// Why is it important to be careful when using `==` (double equals) instead of `===` (triple equals) in our conditionals?
+
+
+// Answer: "==" (double equals)convert operand to same data type before make the comparison which can lead to unexpected results in certain situations due to type coercion,while "==="(triple equals) compare
+//  both type and value ensure strict equality.
