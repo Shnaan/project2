@@ -8,7 +8,7 @@
 //  - Decryption must reverse the random-letter insertion and the shift
 
 
-//function algorithm inspired by sample code provided, the video explanation and AI explanation of Math for both encrypt and decrypt code generation formulas
+//functions algorithm inspired by the  provided sample code , the video explanation and AI explanation of Math for both encrypt and decrypt code generation formulas
 const alphabet = "abcdefghijklmnopqrstuvwxyz";
 
 function encrypt (message, shiftValue)
