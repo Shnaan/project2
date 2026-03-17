@@ -27,24 +27,24 @@ function encrypt (message, shiftValue)
   for (let  i = 0 ; i < message.length ; i ++){
 
     let char = message[i];
-    let code = message.charCodeAt(0);
+    let code = char.charCodeAt(0);
     let base = null;
     const randomLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
 
  
 // generatw base for capital letter and lower case letter base
-  if ( code>= 65 && code <= 90 ){  base = 65;  } else if ( code >= 97 && code <= 120 ){  base = 97;  }
+  if ( code>= 65 && code <= 90 ){  base = 65;  } else if ( code >= 97 && code <= 122 ){  base = 97;  }
 
   if(base !== null){
      // apply shift and generate the encripted charachter 
      encryptedMessage +=String.fromCharCode(((code -base + shiftValue) % 26 + 26) % 26 + base);
-     counter ++;
 
   }else{
     //non alphabet no shift concat direct to encryptedmessage
     encryptedMessage +=char;
 
   }
+        counter ++;
 
   if (counter ===2){
   // add random letter to encrypted message fater each 2 charachter
@@ -89,21 +89,23 @@ function decrypt (encryptedMessage, shiftValue)
     if (base !== null){
       //switch back original letter
      decryptedMessage +=String.fromCharCode(((code -base - shiftValue) % 26 + 26) % 26 + base);
-     
+
      
     }else{
      // non a character concat to decrypted message no decoding needed
      decryptedMessage += char ;
     }
+                counter++;
 
-   counter++;
   }
+
   return decryptedMessage;
 }
 
 
 //testing
 let secret = `Iueuan jrxuq cjythdykwxaj mixkqtaeml ebv wHenckvbkei rqdmt fHukckvi.r Jbxuihus, tmxayiwfuxh sjxau amenhtv 'zQkhhuubyjkit' yjew jhxux mxydatij. zJxmu hvymhihj ajel kldlsuyjb dyju yid uekdh qIbkqsxa xsxqqdvduzb wuqzhdoi qjxwu waueo xjem jfxuy dpuntj dgkvuiwj`;
-
-
+console.log("Encripted message:",secret);
 console.log("Decrypted message:", decrypt(secret, 42));
+
+ 
